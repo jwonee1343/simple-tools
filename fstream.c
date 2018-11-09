@@ -24,8 +24,8 @@ fstream_copy(FILE *src, FILE *cp, long offset)
 
 	buf = malloc(offset);
 	for (leftover = file_getsize(src);
-	     leftover >= offset; 
-		 leftover = leftover - offset)
+	     leftover >= offset;
+	     leftover = leftover - offset)
 	{
 		fread(buf, offset, 1, src);
 		fwrite(buf, offset, 1, cp);
