@@ -15,7 +15,7 @@ file_copy(int src, int cp, long offset)
 	buf = malloc(offset);
 	for (leftover = FILE_SIZE(src);
 	     leftover >= offset; 
-		 leftover = leftover - offset)
+	     leftover = leftover - offset)
 	{
 		read(src, buf, offset);
 		write(cp, buf, offset);
