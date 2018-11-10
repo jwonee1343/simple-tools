@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <malloc.h>
 
 size_t
 fstream_size(FILE *fp)
@@ -15,6 +14,8 @@ fstream_size(FILE *fp)
 
    	return size;
 }
+
+#include <malloc.h>
 
 void
 fstream_copy(FILE *src, FILE *cp, long offset)
