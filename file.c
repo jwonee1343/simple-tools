@@ -1,9 +1,10 @@
-#include <unistd.h>
 #include <sys/stat.h>
-#include <malloc.h>
 
 #define FILE_SIZE(fd) \
 	({ struct stat s; fstat(fd, &s) < 0 ? -1 : s.st_size; })
+
+#include <unistd.h>
+#include <malloc.h>
 
 void
 file_copy(int src, int cp, long offset)
