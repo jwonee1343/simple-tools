@@ -6,8 +6,7 @@
 	({ struct stat s; fstat(fd, &s) < 0 ? -1 : s.st_size; })
 
 
-void
-file_copy(int src, int cp, long offset)
+void file_copy(int src, int cp, long offset)
 {
 	void *buf;
 	size_t leftover;
