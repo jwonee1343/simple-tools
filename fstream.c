@@ -21,6 +21,7 @@ void fstream_copy(FILE *src, FILE *cp, long offset)
 	size_t leftover;
 
 	buf = malloc(offset);
+		
 	for (leftover = fstream_size(src);
 	     leftover >= offset;
 	     leftover = leftover - offset) {
