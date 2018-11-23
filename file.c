@@ -3,7 +3,7 @@
 #include <sys/stat.h>
 
 #define FILE_SIZE(fd) \
-	({ struct stat s; fstat(fd, &s) < 0 ? -1 : s.st_size; })
+	({ struct stat s; fstat(fd, &s) == -1 ? -1 : s.st_size; })
 
 
 void file_copy(int src, int cp, long offset)
